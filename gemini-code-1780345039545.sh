@@ -26,7 +26,7 @@ sudo tee /etc/samba/smb.conf << 'EOF'
 EOF
 
 # 4. Unir Ubuntu al dominio (reemplaza 'ContraseñaAD' con la del Administrador de Windows)
-sudo net ads join -U Administrador%ContraseñaAD
+sudo net ads join -U Administrador%Admin123
 
 # 5. Configurar el cambio de nombres del sistema
 sudo sed -i 's/passwd:.*/passwd:         files winbind/' /etc/nsswitch.conf
